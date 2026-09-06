@@ -8,12 +8,17 @@ configDotenv({ path: "./.env" });
 
 const app = express();
 
-app.use(cors(
-  {
-    origin: "https://todo-with-time.netlify.app",
-    credentials: true,
-  }
-));
+const corsOptions = {
+  origin: [
+    process.env.FRONTEND_URL ||
+    "http://localhost:5173"
+  ],
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
