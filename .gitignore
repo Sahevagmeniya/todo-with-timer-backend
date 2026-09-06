@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory
+coverage/
+
+# Build output
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sequelize CLI config (if contains secrets)
+config/config.json
+
+# Uploads (if storing locally)
+uploads/
+
+# Cache
+.cache/
+
+# Environment-specific files
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug files
+*.tgz
